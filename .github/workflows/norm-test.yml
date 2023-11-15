@@ -8,13 +8,8 @@ on:
     
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on:
     steps:
-    - name: install-build-essential
-      run: sudo apt-get update && sudo apt-get install build-essential libbsd-dev -y
-
-    - name: checkout
-      uses: actions/checkout@v3
 
     - name: norm
       run: /Library/Frameworks/Python.framework/Versions/3.11/bin/norminette
