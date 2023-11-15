@@ -6,7 +6,7 @@
 /*   By: hiraiyuina <hiraiyuina@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 12:11:47 by hiraiyuina        #+#    #+#             */
-/*   Updated: 2023/11/15 12:14:04 by hiraiyuina       ###   ########.fr       */
+/*   Updated: 2023/11/15 12:21:37 by hiraiyuina       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	main(void)
 {
-	printf("NORMINETTE_CHECK\n");
+	printf("NORMINETTE_CHECK1\n");
 	return (0);
 }
