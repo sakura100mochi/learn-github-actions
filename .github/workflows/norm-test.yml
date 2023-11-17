@@ -1,4 +1,4 @@
-name: practice
+name: norminette
 
 on:
   push:
@@ -12,6 +12,4 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Run a one-line script
-        run: echo Hello from practice
+      - name: bash norm.sh 
