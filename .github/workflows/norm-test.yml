@@ -1,18 +1,17 @@
-name: Norm Check
+name: practice
 
 on:
+  push:
+    branches: [ $default-branch ]
   pull_request:
-    branches:
-      - '*'
-  workflow_dispatch:
-    
+    branches: [ $default-branch ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
+      - uses: actions/checkout@v4
 
-    - name: checkout
-      uses: actions/checkout@v3
-
-    - name: norm
-      run: echo "Hello\n"
+      - name: Run a one-line script
+        run: echo Hello from practice
