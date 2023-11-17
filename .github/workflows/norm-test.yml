@@ -12,4 +12,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: cat norm.sh 
+      - shell: bash
+      - name: bash norm.sh 
