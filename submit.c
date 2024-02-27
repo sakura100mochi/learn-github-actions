@@ -32,7 +32,7 @@ int main(void)
     system("git add .");
     snprintf(buf, 17 + strlen(branch_name), "git commit -m \"%s\"", branch_name);
     system(buf);
-    snprintf(buf, 27 + strlen(branch_name), "git push --set-upstream origin %s", branch_name);
+    snprintf(buf, 32 + strlen(branch_name), "git push --set-upstream origin %s", branch_name);
     system(buf);
     return (0);
 }
