@@ -28,7 +28,8 @@ int main(void)
     printf("\n");
     system("git status");
     printf("\n\nPlease type something to continue\n");
-    scanf("%s", branch);
+    rewind(stdin);
+    getchar();
     system("git add .");
     snprintf(buf, 17 + strlen(branch_name), "git commit -m \"%s\"", branch_name);
     system(buf);
