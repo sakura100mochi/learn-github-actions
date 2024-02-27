@@ -31,8 +31,10 @@ int main(void)
     rewind(stdin);
     getchar();
     system("git add .");
+    printf("\n");
     snprintf(buf, 17 + strlen(branch_name), "git commit -m \"%s\"", branch_name);
     system(buf);
+    printf("\n");
     snprintf(buf, 32 + strlen(branch_name), "git push --set-upstream origin %s", branch_name);
     system(buf);
     return (0);
