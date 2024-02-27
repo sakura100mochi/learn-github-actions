@@ -1,38 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(void)
 {
     char    subject[5];
     char    branch[2];
+    char    branch_name[30];
     char    buf[100];
 
     system("git log");
-    printf("Please input your subject numbre : CppProject");
+    printf("\n\nPlease input your subject numbre : CppProject");
     scanf("%s", subject);
-    printf("Please input 1(feature) or 2(fix) : ");
+    printf("\nPlease input 1(feature) or 2(fix) : ");
     scanf("%s", branch);
+    printf("\n");
     if (branch[0] == '1')
-    {
-        snprintf(buf, 34, "git branch feature/CppProject%s", subject);
-        system(buf);
-        snprintf(buf, 34, "git switch feature/CppProject%s", subject);
-        system(buf);
-    }
+        snprintf(branch_name, 23, "feature/CppProject%s", subject);
     else
-    {
-        snprintf(buf, 30, "git branch fix/CppProject%s", subject);
-        system(buf);
-        snprintf(buf, 30, "git switch fix/CppProject%s", subject);
-        system(buf);
-    }
+        snprintf(branch_name, 19, "fix/CppProject%s", subject);
+    snprintf(buf, 12 + strlen(branch_name), "git branch %s", branch_name);
+    system(buf);
+    snprintf(buf, 12 + strlen(branch_name), "git switch %s", branch_name);
+    system(buf);
+    printf("\n");
     system("git branch");
+    printf("\n");
     system("git status");
-    printf("Please type something to continue\n");
+    printf("\n\nPlease type something to continue\n");
     getchar();
     system("git add .");
-    snprintf(buf, 31, "git commit -m \"CppProject%s\"", subject);
+    snprintf(buf, 17 + strlen(branch_name), "git commit -m \"%s\"", branch_name);
     system(buf);
-    system("git push");
+    snprintf(buf, 27 + strlen(branch_name), "git push --set-upstream origin %s", branch_name);
+    system(buf);
     return (0);
 }
