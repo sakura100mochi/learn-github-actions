@@ -25,7 +25,7 @@ int main(void)
     system(buf);
     printf("\n");
     system("git branch");
-    printf("\n--------------------status--------------------");
+    printf("\n--------------------status--------------------\n");
     system("git status");
     printf("----------------------------------------------");
     printf("\n\nPlease type something to continue\n");
